@@ -1,0 +1,13 @@
+<!-- templates/account/register_done.html -->
+{% extends '_base.html' %}
+
+{% block title %} Welcome {% endblock title %}
+
+{% block content %}
+<h3> Welcome {{new_user.first_name}} </h3>
+<p>
+    Your account has been successfully created.
+    Now you can <a href="{% url 'login' %}"> Login </a> 
+</p>
+
+{% endblock content %}
