@@ -6,9 +6,15 @@ __pycache__
 db.sqlite3
 media
 .DS_Store
-
+.cert
+.pem
+.key
 # Backup files # 
 *.bak 
+redis_data
+postgres_data
+*.crt
+*.key
 
 # File-based project format
 *.iws

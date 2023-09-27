@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import user_login, dashboard, registration, account_edit
+from .views import user_login, dashboard, registration, account_edit, user_list, user_detail, user_follow
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView, PasswordResetView, PasswordResetConfirmView, PasswordResetDoneView, PasswordResetCompleteView
 
 
@@ -21,6 +21,10 @@ urlpatterns = [
     path('register/', registration, name="register"),
     path('edit/', account_edit, name='edit'),
 
-    path('dashboard/', dashboard, name="dashboard"),
+    path('', dashboard, name="dashboard"),
+    path('users/', user_list, name="user_list"),
+    path('users/follow/', user_follow, name='user_follow'),
+    path('users/<username>/', user_detail, name="user_detail"),
+
   
 ]
